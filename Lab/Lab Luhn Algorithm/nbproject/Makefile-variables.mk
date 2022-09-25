@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=luhn_algorithm
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/luhn_algorithm
+CND_ARTIFACT_NAME_Debug=lab_luhn_algorithm
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/lab_luhn_algorithm
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=luhnalgorithm.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/luhnalgorithm.tar
+CND_PACKAGE_NAME_Debug=labluhnalgorithm.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/labluhnalgorithm.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=luhn_algorithm
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/luhn_algorithm
+CND_ARTIFACT_NAME_Release=lab_luhn_algorithm
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/lab_luhn_algorithm
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=luhnalgorithm.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/luhnalgorithm.tar
+CND_PACKAGE_NAME_Release=labluhnalgorithm.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/labluhnalgorithm.tar
 #
 # include compiler specific variables
 #

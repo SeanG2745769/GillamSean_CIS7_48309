@@ -4,7 +4,10 @@ using namespace std;
 
 int main(int argc, char** argv) 
 {
-    cout<<"\n   Hello World!  \n\n";
+    int a = 1;
+    int b = 2;
+    swap(a,b);
+    cout<<a<<" "<<b;
     
     return 0;
 }

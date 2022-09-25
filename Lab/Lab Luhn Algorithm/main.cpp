@@ -1,9 +1,7 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Edited by: Sean Gillam
- * Created on Aug 21st, 2022, 10:35 AM
- * Edited On: Sep 5th, 2022
+ * Author: Sean Gillam
+ * Created On: 2022-09-22
  */
 
 //System Libraries
@@ -20,7 +18,6 @@ void prpLuhn(char[],int); //Prepares the Luhn Sequence
 int  cnvrt(char);         //Convert 1 digit char to integer
 char cnvrt(int);          //Convert 1 digit integer to a char
 void output(char[],int);  //Output the sequence as integers
-//Function you are to create
 int Luhn(char[],int);    //Calculate and append the Luhn Digit
 
 int main(int argc, char** argv) {
@@ -41,9 +38,14 @@ int main(int argc, char** argv) {
     
     //Now create a function that fills the last digit
     //using the Luhn Algorithm
-    int last = Luhn(crdCard,SIZE);
+    char last = cnvrt(Luhn(crdCard,SIZE));
+    crdCard[SIZE-1]=last;
     cout<<"\nThe random number with Luhn Encoding, Output Here!"<<endl;
-    cout<<"-> "<<crdCard<<last<<endl;
+    cout<<"-> ";
+    for(int i=0;i<SIZE;i++)
+    {
+        cout<<crdCard[i];
+    }
     
     //Exit Stage Right
     return 0;
@@ -55,9 +57,13 @@ int Luhn(char cd[],int n){
     for(int i=0;i<n;i++){
         ccc[i]=cd[i]-'0';
     }
-    cout<<"Double every other: ";
-    for(int i=n;i>0;i--){//doubling every other from the right
+    cout<<"Double every other then sum the digits: ";
+    for(int i=n+1;i>0;i--){//doubling every other from the right
         ccc[i]=ccc[i]*2;
+        if(ccc[i]>9)
+        {
+            ccc[i]=ccc[i]-9;
+        }
         i=i-1;
     }
     for(int i=0;i<n-2;i++){//output
@@ -69,10 +75,10 @@ int Luhn(char cd[],int n){
         sum = sum+ccc[i];
     }
     cout<<sum<<endl;
-    sum = sum * (9%10);
+    //sum = sum * (9%10);
     int lastDigit;
     lastDigit = sum % 10;
-    cout<<"Multiply by 9: "<<sum<<endl;
+    //out<<"Multiply by 9: "<<sum<<endl;
     cout<<"Last Digit: "<<lastDigit<<endl;
     
     return lastDigit;
