@@ -51,49 +51,54 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-int Luhn(char cd[],int n){
+int Luhn(char cd[],int n)
+{
     cout<<"Applying algorithm:"<<endl;
     int ccc[n];
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         ccc[i]=cd[i]-'0';
     }
     cout<<"Double every other then sum the digits: ";
-    for(int i=n+1;i>0;i--){//doubling every other from the right
-        ccc[i]=ccc[i]*2;
+    for(int i=1;i<n;i++)
+    {
+        if(i%2!=0)
+            ccc[i]=ccc[i]*2;
         if(ccc[i]>9)
-        {
             ccc[i]=ccc[i]-9;
-        }
-        i=i-1;
     }
-    for(int i=0;i<n-2;i++){//output
+    for(int i=0;i<n-2;i++)
+    {
         cout<<ccc[i]<<" ";
     }
-    cout<<"\nSum of digits: ";
+    //Sum of Digits
     int sum = 0;
-    for(int i=0;i<n-2;i++){
+    for(int i=0;i<n-2;i++)
+    {
         sum = sum+ccc[i];
     }
     cout<<sum<<endl;
-    //sum = sum * (9%10);
+    //Getting Last Digit
     int lastDigit;
     lastDigit = sum % 10;
-    //out<<"Multiply by 9: "<<sum<<endl;
-    cout<<"Last Digit: "<<lastDigit<<endl;
     
     return lastDigit;
 }
 
-void output(char cc[],int n){
+void output(char cc[],int n)
+{
     cout<<"The char array output as each integer digit"<<endl;
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         cout<<cnvrt(cc[i]);
     }
     cout<<endl;
 }
 
-char  cnvrt(int digit){
-    if(digit<0||digit>9){
+char  cnvrt(int digit)
+{
+    if(digit<0||digit>9)
+    {
         cout<<"You don't know what you are doing"<<endl;
         exit(0);
     }
@@ -101,26 +106,32 @@ char  cnvrt(int digit){
     //return digit+48;
 }
 
-int  cnvrt(char digit){
-    if(digit<'0'||digit>'9'){
+int  cnvrt(char digit)
+{
+    if(digit<'0'||digit>'9')
+    {
         cout<<"You don't know what you are doing"<<endl;
         exit(0);
     }
     return digit-'0';
 }
 
-void prpLuhn(char cc[],int n){
+void prpLuhn(char cc[],int n)
+{
     //Create a random cc in prep for Luhn checksum
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         cc[i]=rndDgit();
     }
     //Put null terminator at the end
-    for(int i=n;i<=n+1;i++){
+    for(int i=n;i<=n+1;i++)
+    {
         cc[i]='\0';
     }
 }
 
-char rndDgit(){
+char rndDgit()
+{
     return rand()%10+'0';//Ascii Code for numbers '0'=48 and '9'=57
     //return rand()%10+48;//Ascii Code for numbers '0'=48 and '9'=57
 }
