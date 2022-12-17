@@ -1,21 +1,19 @@
 // Get firstname/lastname
 #include <iostream>
 #include <string>
-	
+
+using namespace std;
+
 int main()	
 {
-    int i;
 
-    std::string firstname;
-    std::string lastname;
-    std::cout<<"Enter First Name? ";
-    std::cin>>firstname;
-    std::cin.ignore();
-    for(i=0; firstname[i] ; i++) firstname [i]=toupper(firstname[i]);
-    std::cout<<"Enter Last Name? ";
-    std::cin>>lastname;
-    std::cin.ignore();
-    for(i=0; lastname[i] ; i++) lastname [i]=toupper(lastname[i]);	
-    std::cout << firstname << " " << lastname;
+
+    string key = "Then out spake brave Horatius,\nThe Captain of the Gate:\n"
+            "To every man upon this earth\nDeath cometh soon or late.\nAnd "
+            "how can man die better\nThan facing fearful odds,\nFor the "
+            "ashes of his fathers,\nAnd the temples of his gods.";
+    
+    cout<<key.length();
+    
     return 0;
 }
