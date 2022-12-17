@@ -1,22 +1,19 @@
-//System Libraries Here
+// Get firstname/lastname
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-enum test
+int main()	
 {
-    zero,
-    one,
-    two,
-    three
-};
 
-int main(int argc, char** argv) 
-{
-    int i;
-    for(auto test : {zero, one, two, three})
-    {
-        i = test;
-        cout<<i;
-    }
+
+    string key = "Then out spake brave Horatius,\nThe Captain of the Gate:\n"
+            "To every man upon this earth\nDeath cometh soon or late.\nAnd "
+            "how can man die better\nThan facing fearful odds,\nFor the "
+            "ashes of his fathers,\nAnd the temples of his gods.";
+    
+    cout<<key.length();
+    
     return 0;
 }
